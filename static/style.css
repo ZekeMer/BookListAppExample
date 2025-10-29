@@ -1,0 +1,72 @@
+
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+
+h1 {
+color: #333;
+}
+
+nav a {
+margin-right: 10px;
+}
+
+.success { color: green; }
+.error { color: red; }
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+padding: 8px;
+text-align: left;
+}
+
+.form-container {
+max-width: 400px; /* keeps form centered and narrow */
+margin: 0 auto; /* centers the form horizontally */
+background-color: #f8f8f8;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+display: flex;
+align-items: center;
+margin-bottom: 12px;
+}
+
+.form-group label {
+width: 150px; /* fixed width to align labels */
+font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+flex: 1; /* input expands to fill space */
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.checkbox-group {
+align-items: center;
+}
+
+.btn {
+display: block;
+margin: 15px auto 0;
+padding: 8px 20px;
+background-color: #0059b3;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.btn:hover {
+background-color: #0073e6;
+}

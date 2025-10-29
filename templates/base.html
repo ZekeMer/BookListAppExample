@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Database</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>￿ My Book Collection</h1>
+    <nav>
+        <a href="{{ url_for('add_book') }}">Add Book</a> |
+        <a href="{{ url_for('show_books') }}">All Books</a> |
+        <a href="{{ url_for('recommend_books') }}">Recommended</a>
+    </nav>
+    <hr>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, msg in messages %}
+                <p class="{{ category }}">{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+    <!-- Link to the shared JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

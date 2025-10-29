@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>All Books</h2>
+<table border="1" id="booksTable">
+<tr>
+    <th>Title</th><th>Author</th><th>Year</th><th>Pages</th><th>Recommend</th><th>Actions</th>
+</tr>
+
+{% for book in books %}
+<tr>
+    <td>{{ book.title }}</td>
+    <td>{{ book.author }}</td>
+    <td>{{ book.year }}</td>
+    <td>{{ book.pages }}</td>
+    <td>{{ 'Yes' if book.recommend else 'No' }}</td>
+    <td>
+        <a href="{{ url_for('update_book', id=book.id) }}">Edit</a> |
+        <a href="{{ url_for('delete_book', id=book.id) }}" class="delete-link">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+
+</table>
+{% endblock %}
